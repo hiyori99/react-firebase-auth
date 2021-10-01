@@ -1,6 +1,7 @@
 import { auth } from '../firebase';
 import { useHistory, Redirect } from 'react-router-dom';
 import { useAuthContext } from '../context/AuthContext';
+
 const Home = () => {
   const history = useHistory();
   const { user } = useAuthContext();
@@ -13,6 +14,7 @@ const Home = () => {
     return <Redirect to="/login" />;
   } else {
     return (
+      
       <div>
         <h1>ホームページ</h1>
         <button onClick={handleLogout}>ログアウト</button>
